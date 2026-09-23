@@ -1,0 +1,17 @@
+/* English-mode overrides — applied when <html class="lang-en"> */
+body { transition: opacity 120ms cubic-bezier(.16,1,.3,1); }
+.lang-switching body { opacity: .82; }
+
+html.lang-en body, html.lang-en body * { font-family: var(--font-en); }
+html.lang-en .nav-links a, html.lang-en .nav-cta { letter-spacing: .04em; }
+html.lang-en h1, html.lang-en h2, html.lang-en h3 { text-wrap: balance; }
+html.lang-en p { text-wrap: pretty; }
+
+/* hero: English copy needs darker ink and a little more measure */
+html.lang-en [data-hero-copy] p { max-width: min(420px, 100%) !important; color: var(--brand-bark-deep) !important; }
+
+@media (max-width: 1120px) {
+  html.lang-en .nav-links a { font-size:16px; }
+  html.lang-en .nav-cta { font-size:16px; padding: 10px 17px; }
+  html.lang-en .nav-lang { padding: 7px 11px; font-size:16px; }
+}
